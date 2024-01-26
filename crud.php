@@ -3,10 +3,10 @@ class Crud {
     public $hostname, $database, $username, $password, $connection;
 
     public function __construct() {
-        $this->hostname = "localhost";
-        $this->database = "linkar";
-        $this->username = "root";
-        $this->password = "120qk87L2728@";
+        $this->hostname = "hostname";
+        $this->database = "database";
+        $this->username = "username";
+        $this->password = "password@";
 
         try {
             $this->connection = new PDO("mysql:host=$this->hostname;dbname=$this->database", $this->username, $this->password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
