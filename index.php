@@ -20,14 +20,14 @@ switch ($page) {
         $output = $crud->select('glossario', 'glossario.termo LIKE \'p%\'', '5');
         break;
     case 'insert':
-        $output = $crud->insert('nota2', array('titulo' => "Aqui vai um titulo", "nota" => "Texto Interno"));
+        $output = $crud->insert('nota', array('titulo' => "Aqui vai um titulo", "nota" => "Texto Interno"));
         break;
     case 'update':
-        $output = $crud->update('nota2', array('titulo' => "Oh", "nota" => "<script>function funcao1(){alert(\Eu sou um alert!\");}</script>"), 'id = 46');
+        $output = $crud->update('nota', array('titulo' => "Oh", "nota" => "<script>function funcao1(){alert(\Eu sou um alert!\");}</script>"), 'id = 46');
         // $output = $crud->update('nota2', array('titulo' => "Título <b>bold</b> e <i>Itálico</i>", "nota" => "<script>function funcao1(){alert(\Eu sou um alert!\");}</script><h1>Titulo H1</h1>"), 'id = 44');
         break;
         case 'delete':
-        $output = $crud->delete('nota2', 'id = 50');
+        $output = $crud->delete('nota', 'id = 50');
         break;
     default:
     $output = array('apipdo' => 'Crud em API usando PDO');
