@@ -6,7 +6,7 @@ class Crud {
         $this->hostname = "hostname";
         $this->database = "database";
         $this->username = "username";
-        $this->password = "password@";
+        $this->password = "password";
 
         try {
             $this->connection = new PDO("mysql:host=$this->hostname;dbname=$this->database", $this->username, $this->password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
