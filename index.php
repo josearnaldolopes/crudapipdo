@@ -23,8 +23,8 @@ switch ($page) {
         $output = $crud->insert('nota', array('titulo' => "Aqui vai um titulo", "nota" => "Texto Interno"));
         break;
     case 'update':
-        $output = $crud->update('nota', array('titulo' => "Oh", "nota" => "<script>function funcao1(){alert(\Eu sou um alert!\");}</script>"), 'id = 46');
-        // $output = $crud->update('nota', array('titulo' => "Título <b>bold</b> e <i>Itálico</i>", "nota" => "<script>function funcao1(){alert(\Eu sou um alert!\");}</script><h1>Titulo H1</h1>"), 'id = 44');
+        $output = $crud->update('nota', array('titulo' => "Texto da nota que será Filtrado", "nota" => "<script>function funcao1(){alert(\Eu sou um alert!\");}</script>"), 'id = 46');
+        // $output = $crud->update('nota', array('titulo' => "Título que mantêm o <b>bold</b> e o <i>Itálico</i>", "nota" => "Texto com <b>bold</b> e o <i>Itálico</i>"), 'id = 44');
         break;
         case 'delete':
         $output = $crud->delete('nota', 'id = 50');
